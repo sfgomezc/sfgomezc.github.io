@@ -1,0 +1,44 @@
+.navbar h3 {
+  margin: 10px;
+  text-align: center;
+  font-size: 28px;
+  font-family: Calibri;
+}
+
+.navbar {
+  background: #81BEF7;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+}
+
+ul.nav.nav-pills {
+  display: inline-block;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  background-color: #ddd;
+}
+
+.asterisk {
+  color:red;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.panel-dibujo {
+  max-height: 400px;
+    overflow: auto;
+    padding: 0;
+}
+
+.panel-dibujo canvas {
+  width: 100%;
+}

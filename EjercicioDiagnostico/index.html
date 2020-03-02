@@ -1,0 +1,134 @@
+<html lang="es" dir="ltr" class="inited">
+  <head>
+    <title>Dibujar figuras</title>
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hojaEstilos.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <h3>Dibujar figuras</h3>
+    </nav>
+    <div class="container">
+      <h3>¡Bienvenido!</h3>
+      <p><span class="glyphicon glyphicon-info-sign"></span> Por favor selecciona la figura que deseas dibujar
+      </p>
+      <div class="form-group text-center">
+        <ul class="nav nav-pills">
+          <li>
+            <a data-toggle="pill" href="#divCuadrado">
+              <svg height="46" width="40">
+                <rect rx="0" ry="0" width="40" height="40" fill="blue" y="6%"></rect>
+                Su navegador no soporta SVG :/
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="pill" href="#divCirculo">
+              <svg height="46" width="46">
+                <circle cx="50%" cy="22.5" r="20" fill="red"></circle>
+                Su navegador no soporta SVG :/
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="pill" href="#divTriangulo">
+              <svg height="46" width="40">
+                <polygon points="20,2 40,44 0,44" fill="purple"></polygon>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a data-toggle="pill" href="#divRectangulo">
+              <svg height="46" width="40">
+                <rect y="22.5%" rx="5" ry="0" width="40" height="25" fill="green"></rect>
+                Su navegador no soporta SVG :/
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-1">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div id="panelInformacion">
+                Una vez selecciones la figura a dibujar, se mostrará un formulario para ingresar las medidas correspondientes
+              </div>
+              <div class="tab-content" id="panelFormularios" style="display:none">
+                <p>Ingresa las dimensiones de la figura</p>
+                <div id="divCuadrado" class="tab-pane fade">
+                  <form autocomplete="off" onsubmit="return calcularYDibujar('cuadrado');">
+                    <div class="form-group">
+                      <label for="txtLadoC">Longitud (px): <span class="asterisk">*</span></label>
+                      <input type="number" class="form-control" id="txtLadoC" name="txtLadoC" min="0" pattern="\d+(?:\.\d+)" step="0.01"required>
+                    </div>
+                    <div class="text-center">
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Dibujar</button>
+                    </div>
+                  </form>
+                </div>
+                <div id="divCirculo" class="tab-pane fade">
+                  <form autocomplete="off" onsubmit="return calcularYDibujar('circulo');">
+                    <div class="form-group">
+                      <label for="txtRadio">Radio (px): <span class="asterisk">*</span></label>
+                      <input type="number" class="form-control" id="txtRadio" name="txtRadio" min="0" pattern="\d+(?:\.\d+)" step="0.01" required>
+                    </div>
+                    <div class="text-center">
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Dibujar</button>
+                    </div>
+                  </form>
+                </div>
+                <div id="divTriangulo" class="tab-pane fade">
+                  <form autocomplete="off" onsubmit="return calcularYDibujar('triangulo');">
+                    <div class="form-group">
+                      <label for="txtLadoT">Longitud (px): <span class="asterisk">*</span></label>
+                      <input type="number" class="form-control" id="txtLadoT" name="txtLadoT" min="0" pattern="\d+(?:\.\d+)" step="0.01" required>
+                    </div>
+                    <div class="text-center">
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Dibujar</button>
+                    </div>
+                  </form>
+                </div>
+                <div id="divRectangulo" class="tab-pane fade">
+                  <form autocomplete="off" onsubmit="return calcularYDibujar('rectangulo');">
+                    <div class="form-group">
+                      <label for="txtLargoR">Ancho (px): <span class="asterisk">*</span></label>
+                      <input type="number" class="form-control" id="txtLargoR" min="0" pattern="\d+(?:\.\d+)" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="txtAltoR">Alto (px): <span class="asterisk">*</span></label>
+                      <input type="number" class="form-control" id="txtAltoR" min="0" pattern="\d+(?:\.\d+)" step="0.01" required>
+                    </div>
+                    <div class="text-center">
+                      <button class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Dibujar</button>
+                    </div>
+                  </form>
+                </div>
+                <div id="panelResultado">
+                  <div class="form-group">
+                    <label for="txtLadoC">Perímetro (px):</label>
+                    <p class="form-control-static" id="txtPerimetro"><i>Sin calcular</i></p>
+                  </div>
+                  <div class="form-group">
+                    <label for="txtLadoC">Área (px):</label>
+                    <p class="form-control-static" id="txtArea"><i>Sin calcular</i></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-body panel-dibujo">
+              <canvas id="dibujo" width="400" height="400"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="plugins/jQuery-2.1.4.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="funciones.js"></script>
+  </body>
+</html>
