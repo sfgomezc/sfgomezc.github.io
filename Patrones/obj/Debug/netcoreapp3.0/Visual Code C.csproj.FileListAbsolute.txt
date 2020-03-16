@@ -1,0 +1,11 @@
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\bin\Debug\netcoreapp3.0\Visual Code C.exe
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\bin\Debug\netcoreapp3.0\Visual Code C.deps.json
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\bin\Debug\netcoreapp3.0\Visual Code C.runtimeconfig.json
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\bin\Debug\netcoreapp3.0\Visual Code C.runtimeconfig.dev.json
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\bin\Debug\netcoreapp3.0\Visual Code C.dll
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\bin\Debug\netcoreapp3.0\Visual Code C.pdb
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\obj\Debug\netcoreapp3.0\Visual Code C.csprojAssemblyReference.cache
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\obj\Debug\netcoreapp3.0\Visual Code C.AssemblyInfoInputs.cache
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\obj\Debug\netcoreapp3.0\Visual Code C.AssemblyInfo.cs
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\obj\Debug\netcoreapp3.0\Visual Code C.dll
+C:\Users\sgomez\desktop\ProyectoGit\Patrones\obj\Debug\netcoreapp3.0\Visual Code C.pdb
